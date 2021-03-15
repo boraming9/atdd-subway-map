@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
-import com.shinhancard.profile.ProfileAggregationClient;
+import com.shinhancard.profile.response.ProfileAggregationClient;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,16 +27,6 @@ public class SmallTalkConfig {
 		return new RestTemplate();
 	}
 	
-	// TODO : 뭐하는 용도?
-//	@Bean
-//	ModelMapper modelMapper() {
-//		ModelMapper modelMapper = new ModelMapper();
-//		modelMapper.getConfiguration()
-//		  .setMatchingStrategy(MatchingStrategies.STRICT); 
-//	 	
-//		return modelMapper;
-//	}
-
 	@Bean
 	ProfileAggregationClient profileClient() {
 		
